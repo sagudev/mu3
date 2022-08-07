@@ -14,7 +14,6 @@ fn do_folder(path: &Path) {
         .filter(|x| x.file_type().is_file())
     {
         let path = e.path();
-        println!("{path:?}");
         let ext = path
             .extension()
             .unwrap_or_else(|| std::ffi::OsStr::new(""))
