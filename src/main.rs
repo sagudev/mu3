@@ -27,6 +27,7 @@ fn do_folder(path: &Path) {
 }
 
 fn do_file(path: &Path) {
+    println!("Doing file {path:?}");
     let mut file = File::open(path).expect("Unable to open file");
     let mut data = String::new();
     file.read_to_string(&mut data)
